@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+<bean id="irvr" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<property name="prefix" value="/WEB-INF/pages/"></property>
+<property name="suffix" value=".jsp"></property>
+</bean>
+<bean id="suhm" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+<property name="mappings">
+<props>
+<prop key="home.htm">hvc</prop>
+<prop key="aboutUs.htm">auvc</prop>
+<prop key="contactUs.htm">cuvc</prop>
+<prop key="wish.htm">wmgc</prop>
+</props>
+</property>
+</bean>
+<bean id="hvc" class="com.java.HomeViewController"></bean>
+<bean id="auvc" class="com.java.AboutusViewController"></bean>
+<bean id="cuvc" class="com.java.ContactusViewController"></bean>
+<bean id="wmgc" class="com.java.WishMessageGeneratorController"></bean>
+
+</beans>
